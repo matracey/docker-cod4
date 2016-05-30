@@ -28,9 +28,9 @@ matracey/world-at-war +set sv_authorizemode '-1' +exec server.cfg +map_rotate
 
 * `-p 28960:28960 -p 28960:28960/udp`: This forwards TCP & UDP ports 28960 (the default CoD Server Port) to the docker host. I haven't needed any other ports exposed but YMMV.
 
-* `-v /var/cod4/res/main:/home/cod4/main`: Mounts the `main` folder in my Docker host's filesystem to the `main` folder within the container's filesystem. I copied the contents of this from the CoD:WaW installation on my PC.
+* `-v /var/cod4/res/main:/home/cod4/main`: Mounts the `main` folder in my Docker host's filesystem to the `main` folder within the container's filesystem. I copied the contents of this from the CoD4:MW installation on my PC.
 
-* `-v /var/cod4/res/main:/home/cod4/zone`: Mounts the `zone` folder in my Docker host's filesystem to the `zone` folder within the container's filesystem. I copied the contents of this from the CoD:WaW installation on my PC.
+* `-v /var/cod4/res/main:/home/cod4/zone`: Mounts the `zone` folder in my Docker host's filesystem to the `zone` folder within the container's filesystem. I copied the contents of this from the CoD4:MW installation on my PC.
 
 * `-v /var/cod4/res/mods:/home/cod4/mods`: Mounts the `mods` folder in my Docker host's filesystem to the `mods` folder within the container's filesystem. I keep any mods I want to install on the server in here.
 
