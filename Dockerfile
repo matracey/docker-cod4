@@ -17,4 +17,11 @@ ENTRYPOINT ["/home/cod4/cod4x18_dedrun"]
 
 CMD ["+set sv_authorizemode '-1'", "+exec server.cfg", "+map_rotate"]
 
+VOLUME ["/home/cod4/main"]
+VOLUME ["/home/cod4/zone"]
+VOLUME ["/home/cod4/mods"]
+VOLUME ["/home/cod4/usermaps"]
+VOLUME ["/home/cod4/main/server.cfg"]
+VOLUME ["/home/cod4/main/games_mp.log"]
+
 EXPOSE 28960:28960/udp
