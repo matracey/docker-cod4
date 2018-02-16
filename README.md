@@ -1,5 +1,7 @@
 # COD4 Docker dedicated server
 
+This is WIP but it works on your local network.  LAN
+
 Runs a Call of duty 4 Modern Warfare dedicated server in a Docker container.
 
 - Based on:
@@ -47,11 +49,11 @@ Note the following.
 
 | **Host path** | **Container path** | Note |
 | --- | --- | --- |
-| /mnt/user/$Sharename$/main | /home/cod4/main ||
-| /mnt/user/$Sharename$/zone | /home/cod4/zone ||
-| /mnt/user/$Sharename$/mods | /home/cod4/mods ||
-| /mnt/user/$Sharename$/usermaps | /home/cod4/usermaps | This folder might not be in your Call of Duty 4 |
-
+| /mnt/user/$Sharename$/main | /home/cod4/main | I copied the contents of this from my CoD4:MW |
+| /mnt/user/$Sharename$/zone | /home/cod4/zone | I copied the contents of this from my CoD4:MW |
+| /mnt/user/$Sharename$/mods | /home/cod4/mods | I keep any mods I want to install on the server in here |
+| /mnt/user/$Sharename$/usermaps | /home/cod4/usermaps | I keep my custom maps in here |
+| /mnt/user/$Sharename$/serverconf/server.cfg | /home/cod4/main/server.cfg | This is where to point to your server.cfg file |
 
 Important:
 
