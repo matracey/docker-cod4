@@ -24,4 +24,6 @@ VOLUME ["/home/cod4/usermaps"]
 VOLUME ["/home/cod4/main/server.cfg"]
 VOLUME ["/home/cod4/main/games_mp.log"]
 
-EXPOSE 28960/UDP 20800/UDP 20810/UDP
+EXPOSE 28960/udp
+EXPOSE 20810/udp
+EXPOSE 20800/udp
