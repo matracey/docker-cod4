@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER matracey
 
-ENV LANG='da_DK.UTF-8' LANGUAGE='da_DK:da' LC_ALL='da_DK.UTF-8'
+ENV LANG=da_DK.UTF-8 LANGUAGE=da_DK:da LC_ALL=da_DK.UTF-8
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y install glibc.i686 libgcc.i686 libstdc++.i686 zlib.i686
