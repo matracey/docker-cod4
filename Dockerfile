@@ -16,14 +16,10 @@ WORKDIR /home/cod4
 
 ENTRYPOINT ["/home/cod4/cod4x18_dedrun"]
 
-CMD [${FUN_VAR}, "+set sv_authorizemode '-1'", "+exec server.cfg", "+map_rotate"]
+CMD ["+set sv_authorizemode '-1'", "+exec server.cfg", "+map_rotate"]
 
 VOLUME ["/home/cod4/main"]
 VOLUME ["/home/cod4/zone"]
 VOLUME ["/home/cod4/mods"]
 VOLUME ["/home/cod4/usermaps"]
 VOLUME ["/home/cod4/main/server.cfg"]
-
-EXPOSE 28960/udp
-EXPOSE 20810/udp
-EXPOSE 20800/udp
