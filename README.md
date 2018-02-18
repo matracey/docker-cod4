@@ -38,9 +38,9 @@ henkallsn/docker-cod4 +set sv_authorizemode '-1' +exec server.cfg +map_rotate
 	~~~
 
 Note the files can be found in the installed game directory. 
-	```bash
+	~~~
 	~\Activision\Call of Duty 4 - Modern Warfare
-	```
+	~~~
 
 Note the following.
 - The container uses port UDP 28960 as default so that has to be forwarded.
@@ -60,9 +60,9 @@ Push the slider in the upper right corner of Unraid. (Basic View)
 
 In the "Post Arguments" put in this:
 
-	```bash
+	~~~
 	+set net_port "28960" +set sv_authorizemode '-1' +exec server.cfg +map_rotate 
-	```
+	~~~
 The +exec server.cfg line has to be there and should NOT be changed.
 
 If you whant to use mods then put this in as well:
