@@ -23,7 +23,3 @@ VOLUME ["/home/cod4/zone"]
 VOLUME ["/home/cod4/mods"]
 VOLUME ["/home/cod4/usermaps"]
 VOLUME ["/home/cod4/main/server.cfg"]
-
-EXPOSE 28960/udp
-EXPOSE 20810/udp
-EXPOSE 20800/udp
