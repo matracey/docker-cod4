@@ -43,9 +43,7 @@ Note the files can be found in the installed game directory.
 	```
 
 Note the following.
-- The container port UDP 28960 is forwarded to the host port UDP 28960
-- The container port UDP 20810 is forwarded to the host port UDP 20810
-- The container port UDP 20800 is forwarded to the host port UDP 20800
+- The container uses port UDP 28960 as default so that has to be forwarded.
 
 | **Host path** | **Container path** | Note |
 | --- | --- | --- |
@@ -57,14 +55,22 @@ Note the following.
 
 Important:
 
-In Unraid the is a "Post Arguments" field under the "Advanced View"
+In Unraid there is a "Post Arguments" field under the "Advanced View"
 Push the slider in the upper right corner of Unraid. (Basic View)
 
 In the "Post Arguments" put in this:
 
 	```bash
-	+set sv_authorizemode '-1' +exec server.cfg +map_rotate 
+	+set net_port "28960" +set sv_authorizemode '-1' +exec server.cfg +map_rotate 
 	```
+The +exec server.cfg line has to be there and should NOT be changed.
+
+If you whant to use mods then put this in as well:
+
+	```bash
+	+set fs_game "mods/$MODNAMNE$"
+	```
+Write the name of you mod instead of $MODNAMNE$
 
 ## Testing
 
