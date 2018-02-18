@@ -33,14 +33,14 @@ henkallsn/docker-cod4 +set sv_authorizemode '-1' +exec server.cfg +map_rotate
 - You only need the "main", "zone", "mods" and "usermaps" from your Call of Duty 4.
 - You can omit the `main/video` directory as this is not needed by the server.
 - You can find a sample file to a "server.cfg" file on github.
-	~~~
-	https://github.com/henkall/docker-cod4
-	~~~
+~~~
+https://github.com/henkall/docker-cod4
+~~~
 
 Note the files can be found in the installed game directory. 
-	~~~
-	~\Activision\Call of Duty 4 - Modern Warfare
-	~~~
+~~~
+\Activision\Call of Duty 4 - Modern Warfare
+~~~
 
 Note the following.
 - The container uses port UDP 28960 as default so that has to be forwarded.
@@ -60,16 +60,16 @@ Push the slider in the upper right corner of Unraid. (Basic View)
 
 In the "Post Arguments" put in this:
 
-	~~~
-	+set net_port "28960" +set sv_authorizemode '-1' +exec server.cfg +map_rotate 
-	~~~
+~~~
++set net_port "28960" +set sv_authorizemode '-1' +exec server.cfg +map_rotate 
+~~~
 The +exec server.cfg line has to be there and should NOT be changed.
 
 If you whant to use mods then put this in as well:
 
-	```bash
-	+set fs_game "mods/$MODNAMNE$"
-	```
+~~~
++set fs_game "mods/$MODNAMNE$"
+~~~
 Write the name of you mod instead of $MODNAMNE$
 
 ## Testing
