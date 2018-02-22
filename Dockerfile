@@ -3,7 +3,9 @@ MAINTAINER matracey
 
 ENV LANG=da_DK.UTF-8
 ENV LANGUAGE=da_DK
-ENV ARGS=""
+ENV PORT=""
+ENV MOD=""
+ENV MAP=""
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y install glibc.i686 libgcc.i686 libstdc++.i686 zlib.i686
