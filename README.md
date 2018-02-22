@@ -63,10 +63,10 @@ The +exec server.cfg line has to be there and should NOT be changed.
 
 | **Command** | **Description** |
 |---|---|
-|+set net_port 28960|Sets what port the server run on|
-|+map_rotate|Starts the server with the defined rotate sequens in server.cfg file|
-|+set fs_game "mods/$MODNAMNE$"|Defines what mod you whant to use. Write the name of your mod instead of $MODNAMNE$|
-|sv_authorizemode -1|1 only allows players with legal copies to join, 0 allows cracked players, and -1 allows both types of players while the Activison authentication server is down.|
+| +set net_port 28960 | Sets what port the server run on |
+| +map_rotate | Starts the server with the defined rotate sequens in server.cfg file |
+| +set fs_game mods/$MODNAMNE$ | Defines what mod you whant to use. Write the name of your mod instead of $MODNAMNE$ |
+| sv_authorizemode -1 | 1 only allows players with legal copies to join, 0 allows cracked players, and -1 allows both types of players while the Activison authentication server is down. |
 |---|---|
 
 ## Testing
