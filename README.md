@@ -54,12 +54,8 @@ Note the following.
 
 Important:
 
-The docker uses the "ARGS" enviroment variable to pass commands to the servers startup.
+The docker uses "PORT", "MAP", "MOD" and "EXTRA" enviroment variable to pass commands to the servers startup.
 Here is a list of commands that I use:
-~~~
-+set net_port 28960 +set sv_authorizemode -1 +map_rotate
-~~~
-The +exec server.cfg line has to be there and should NOT be changed.
 
 | **Command** | **Description** | **Use in** |
 |---|---|---|
