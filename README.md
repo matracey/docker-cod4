@@ -59,10 +59,10 @@ Here is a list of commands that I use:
 
 | **Command** | **Description** | **Use in** |
 |---|---|---|
-| +set net_port 28960 | Sets what port the server run on | Use in "PORT" env variable |
-| +map_rotate | Starts the server with the defined rotate sequens in server.cfg file | Use in "MAP" env variable |
-| +set fs_game mods/$MODNAME$ | Defines what mod you whant to use. Write the name of your mod instead of $MODNAME$ | Use in "MOD" env variable |
-| sv_authorizemode -1 | 1 only allows players with legal copies to join, 0 allows cracked players, and -1 allows both types of players while the Activison authentication server is down. | Use in "EXTRA" env variable |
+| +set net_port 28960 | Sets what port the server run on | PORT variable |
+| +map_rotate | Starts the server with the defined rotate sequens in server.cfg file | MAP variable |
+| +set fs_game mods/$MODNAME$ | Defines what mod you whant to use. Write the name of your mod instead of $MODNAME$ | MOD variable |
+| sv_authorizemode -1 | 1 only allows players with legal copies to join, 0 allows cracked players, and -1 allows both types of players while the Activison authentication server is down. | EXTRA variable |
 
 ## Testing
 
