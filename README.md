@@ -15,15 +15,14 @@ Runs a Call of duty 4 Modern Warfare dedicated server in a Docker container.
 - If you wan't to run this manually then here is a example how to do it:
 
 ~~~
-docker run --user=root -it --name cod4 \
--p 28960:28960 -p 28960:28960/udp \
+docker run --user=cod4 -it --name cod4 \
+-p 28960:28960/udp \
 -v /cod4/user/$Sharename$/res/main:/home/cod4/main \
 -v /cod4/user/$Sharename$/res/zone:/home/cod4/zone \
 -v /cod4/user/$Sharename$/res/mods:/home/cod4/mods \
 -v /cod4/user/$Sharename$/res/usermaps:/home/cod4/usermaps \
 -v /cod4/user/$Sharename$/server.cfg:/home/cod4/main/server.cfg \
--v /cod4/user/$Sharename$/games_mp.log:/home/cod4/main/games_mp.log \
-henkallsn/docker-cod4 +set sv_authorizemode '-1' +exec server.cfg +map_rotate
+henkallsn/docker-cod4
 ~~~
 
 - This guide is optimized for Unraid
@@ -55,22 +54,20 @@ Note the following.
 
 Important:
 
-In Unraid there is a "Post Arguments" field under the "Advanced View"
-Push the slider in the upper right corner of Unraid. (Basic View)
-
-In the "Post Arguments" put in this:
-
+The docker uses the "ARGS" enviroment variable to pass commands to the servers startup.
+Here is a list of commands that I use:
 ~~~
-+set net_port "28960" +set sv_authorizemode '-1' +exec server.cfg +map_rotate 
++set net_port "28960" +set sv_authorizemode '-1' +map_rotate
 ~~~
 The +exec server.cfg line has to be there and should NOT be changed.
 
-If you whant to use mods then put this in as well:
-
-~~~
-+set fs_game "mods/$MODNAMNE$"
-~~~
-Write the name of you mod instead of $MODNAMNE$
+| **Command** | **Description** |
+|---|---|
+|+set net_port 28960|Sets what port the server run on|
+|+map_rotate|Starts the server with the defined rotate sequens in server.cfg file|
+|+set fs_game "mods/$MODNAMNE$"|Defines what mod you whant to use. Write the name of your mod instead of $MODNAMNE$|
+|sv_authorizemode -1|1 only allows players with legal copies to join, 0 allows cracked players, and -1 allows both types of players while the Activison authentication server is down.|
+|---|---|
 
 ## Testing
 
