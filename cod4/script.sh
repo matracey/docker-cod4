@@ -10,6 +10,6 @@ else
 fi
 if [[ -z "${ARGS}" ]]; then
   echo "The ARGS variable is empty."
-  ARGS="+set net_port 28960 +map_rotate +exec server.cfg"
+  ARGS="+set net_port 28960 +map_rotate"
 fi
-./cod4x18_dedrun "$ARGS"
+./cod4x18_dedrun "$ARGS +exec server.cfg"
