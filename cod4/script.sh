@@ -8,8 +8,14 @@ if [ ! -f cod4x18_dedrun ]; then
 else
   echo "cod4x18_dedrun found" 
 fi
-if [[ -z "${ARGS}" ]]; then
-  echo "The ARGS variable is empty."
-  ARGS="+set net_port 28960 +map_rotate"
+
+if [[ -z "${PORT}" ]]; then
+  echo "The PORT variable is empty."
+  PORT="+set net_port 28960"
 fi
-./cod4x18_dedrun "$ARGS +exec server.cfg"
+
+if [[ -z "${MAP}" ]]; then
+  echo "The MAP variable is empty."
+  MAP="+map_rotate"
+fi
+./cod4x18_dedrun "$PORT $MOD +exec server.cfg $MAP"
