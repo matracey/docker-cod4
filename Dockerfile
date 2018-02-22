@@ -16,7 +16,7 @@ WORKDIR /home/cod4
 
 #ENTRYPOINT ["/home/cod4/cod4x18_dedrun"]
 #CMD ["+set sv_authorizemode '-1'", "+exec server.cfg", "+map_rotate"]
-CMD [script.sh]
+ENTRYPOINT ["/home/cod4/script.sh"]
 
 VOLUME ["/home/cod4/main"]
 VOLUME ["/home/cod4/zone"]
