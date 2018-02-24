@@ -11,7 +11,7 @@ fi
 
 if [[ -z "${PORT}" ]]; then
   echo "The PORT variable is empty."
-  PORT="+set net_port 28960"
+  PORT="+set net_port '28960'"
 fi
 
 if [[ -z "${MAP}" ]]; then
