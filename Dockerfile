@@ -6,7 +6,7 @@ ENV LANGUAGE=da_DK
 
 # Running options to COD4 server 
 ENV PORT="+set net_port 28960"
-ENV MOD
+ENV MOD=""
 ENV MAP="+map_rotate"
 ENV EXTRA="+set sv_authorizemode -1"
 
