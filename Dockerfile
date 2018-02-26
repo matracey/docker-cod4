@@ -8,7 +8,7 @@ ENV LANGUAGE=da_DK
 ENV PORT="28960"
 ENV MODNAME=""
 ENV MAP="+map_rotate"
-ENV EXTRA="+set sv_authorizemode -1"
+ENV EXTRA=""
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y install glibc.i686 libgcc.i686 libstdc++.i686 zlib.i686
