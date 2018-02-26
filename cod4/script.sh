@@ -18,4 +18,4 @@ if [[ -z "${MAP}" ]]; then
   echo "The MAP variable is empty."
   MAP="+map_rotate"
 fi
-./cod4x18_dedrun " +set net_port"$PORT" +set fs_game mods/"$MODNAME" "$EXTRA" +exec server.cfg "$MAP
+./cod4x18_dedrun "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec server.cfg" $MAP
