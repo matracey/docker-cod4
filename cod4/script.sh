@@ -11,11 +11,11 @@ fi
 
 if [[ -z "${PORT}" ]]; then
   echo "The PORT variable is empty."
-  PORT="+set net_port 28960"
+  PORT="28960"
 fi
 
 if [[ -z "${MAP}" ]]; then
   echo "The MAP variable is empty."
   MAP="+map_rotate"
 fi
-./cod4x18_dedrun $PORT " " $MOD " " $EXTRA" +exec server.cfg " $MAP
+./cod4x18_dedrun "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec server.cfg" "$MAP"
