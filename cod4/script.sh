@@ -19,16 +19,17 @@ fi
 #	fi
 #fi
 #echo "Main not found or emty"
+echo "Setting port"
 if [[ -z "${PORT}" ]]; then
   echo "The PORT variable is empty."
   PORT="28960"
 fi
-
+echo "Setting MAP"
 if [[ -z "${MAP}" ]]; then
   echo "The MAP variable is empty."
   MAP="+map_rotate"
 fi
-
+echo "Checking if READY"
 if [[ ! -z "${READY}" ]]; then
 	if [[ ! -z "${MODNAME}" ]]; then
 		./cod4x18_dedrun "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec server.cfg" "$MAP"
