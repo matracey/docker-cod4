@@ -5,6 +5,7 @@ ENV LANG=da_DK.UTF-8
 ENV LANGUAGE=da_DK
 
 # Running options to COD4 server 
+ENV READY=""
 ENV PORT="28960"
 ENV MODNAME=""
 ENV MAP="+map_rotate"
