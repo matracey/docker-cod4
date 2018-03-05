@@ -18,8 +18,8 @@ if [[ -f main ]]; then
 	cp xbase_00.iwd main/
 	echo "copying xbase_00.iwd done"
 	fi
-	else
-	echo "ERROR Main not found!!!"
+else
+echo "ERROR Main not found!!!"
 fi
 echo "Setting port"
 if [[ -z "${PORT}" ]]; then
