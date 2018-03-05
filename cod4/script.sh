@@ -10,7 +10,7 @@ else
   echo "cod4x18_dedrun found" 
 fi
 echo "Testing if main is there"
-if [[ -f main ]]; then
+if [[ -d main ]]; then
 	echo "main found"
 	echo "testing if xbase_00.iwd is in main"
 	if [[ ! -f main/xbase_00.iwd ]]; then
