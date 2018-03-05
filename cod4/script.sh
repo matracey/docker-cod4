@@ -23,19 +23,16 @@ if [ "$(ls -A main)" ]; then
 else
 echo "Main is Empty"
 fi
-echo "Testing if Mods is empty"
 if [ "$(ls -A mods)" ]; then
      echo "Mods Good"
 else
     echo "Mods is Empty"
 fi
-echo "Testing if Usermaps is empty"
 if [ "$(ls -A usermaps)" ]; then
      echo "Usermaps Good"
 else
     echo "Usermaps is Empty"
 fi
-echo "Testing if Zone is empty"
 if [ "$(ls -A zone)" ]; then
      echo "Zone is Good"
 else
