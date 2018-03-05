@@ -9,7 +9,12 @@ else
   echo "cod4x18_dedrun found" 
 fi
 if [[ -f main ]]; then
+	echo "main found"
+	if [[ ! -f main/xbase_00.iwd ]]; then
+	echo "xbase_00.iwd not found"
 	cp xbase_00.iwd main/
+	echo "copying xbase_00.iwd done"
+	fi
 fi
 if [[ -z "${PORT}" ]]; then
   echo "The PORT variable is empty."
