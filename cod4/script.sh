@@ -17,25 +17,27 @@ if [ "$(ls -A main)" ]; then
 	echo "Xbase_00.iwd not found copying it now"
 	cp xbase_00.iwd main/
 	echo "Copying xbase_00.iwd done"
+	else
+	echo "Xbase_00.iwd is Good"
 	fi
 else
 echo "Main is Empty"
 fi
 echo "Testing if Mods is empty"
 if [ "$(ls -A mods)" ]; then
-     echo "Mods is not Empty"
+     echo "Mods Good"
 else
     echo "Mods is Empty"
 fi
 echo "Testing if Usermaps is empty"
 if [ "$(ls -A usermaps)" ]; then
-     echo "Usermaps is not Empty"
+     echo "Usermaps Good"
 else
     echo "Usermaps is Empty"
 fi
 echo "Testing if Zone is empty"
 if [ "$(ls -A zone)" ]; then
-     echo "Zone is not Empty"
+     echo "Zone is Good"
 else
     echo "Zone is Empty"
 fi
