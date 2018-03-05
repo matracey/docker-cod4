@@ -53,8 +53,9 @@ if [[ -z "${MAP}" ]]; then
 fi
 echo "Checking if READY"
 if [[ ! -z "${READY}" ]]; then
+	echo "Config is not Ready"
 	if [[ ! -z "${MODNAME}" ]]; then
-		echo "Mod enabled"
+		echo "Mod enabled (using $MODNAME mod)"
 		./cod4x18_dedrun "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec server.cfg" "$MAP"
 	else
 		echo "Not using Mod"
