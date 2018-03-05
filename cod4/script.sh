@@ -21,6 +21,24 @@ if [[ -d main ]]; then
 else
 echo "ERROR Main not found!!!"
 fi
+echo "Testing if Mods is there"
+if [[ -d mods ]]; then
+echo "Mods found"
+else
+echo "ERROR Mods not found!!!"
+fi
+echo "Testing if Usermaps is there"
+if [[ -d usermaps ]]; then
+echo "Usermaps found"
+else
+echo "ERROR Usermaps not found!!!"
+fi
+echo "Testing if Zone is there"
+if [[ -d zone ]]; then
+echo "Zone found"
+else
+echo "ERROR Zone not found!!!"
+fi
 echo "Setting port"
 if [[ -z "${PORT}" ]]; then
   echo "The PORT variable is empty."
