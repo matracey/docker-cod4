@@ -11,7 +11,7 @@ else
 fi
 echo "Testing if Main is empty"
 if [ "$(ls -A main)" ]; then
-	echo "Main is not Empty"
+	echo "Main is Good"
 	echo "Testing if xbase_00.iwd is in main"
 	if [[ ! -f main/xbase_00.iwd ]]; then
 	echo "Xbase_00.iwd not found copying it now"
