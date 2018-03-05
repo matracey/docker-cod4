@@ -9,9 +9,9 @@ else
   chmod +x cod4x18_dedrun
   echo "cod4x18_dedrun found" 
 fi
-echo "Testing if main is there"
-if [[ -d main ]]; then
-	echo "Main found"
+echo "Testing if Main is empty"
+if [ "$(ls -A main)" ]; then
+	echo "Main is not Empty"
 	echo "Testing if xbase_00.iwd is in main"
 	if [[ ! -f main/xbase_00.iwd ]]; then
 	echo "Xbase_00.iwd not found copying it now"
@@ -19,25 +19,25 @@ if [[ -d main ]]; then
 	echo "Copying xbase_00.iwd done"
 	fi
 else
-echo "ERROR Main not found!!!"
+echo "Main is Empty"
 fi
-echo "Testing if Mods is there"
-if [[ -d mods ]]; then
-echo "Mods found"
+echo "Testing if Mods is empty"
+if [ "$(ls -A mods)" ]; then
+     echo "Mods is not Empty"
 else
-echo "ERROR Mods not found!!!"
+    echo "Mods is Empty"
 fi
-echo "Testing if Usermaps is there"
-if [[ -d usermaps ]]; then
-echo "Usermaps found"
+echo "Testing if Usermaps is empty"
+if [ "$(ls -A usermaps)" ]; then
+     echo "Usermaps is not Empty"
 else
-echo "ERROR Usermaps not found!!!"
+    echo "Usermaps is Empty"
 fi
-echo "Testing if Zone is there"
-if [[ -d zone ]]; then
-echo "Zone found"
+echo "Testing if Zone is empty"
+if [ "$(ls -A zone)" ]; then
+     echo "Zone is not Empty"
 else
-echo "ERROR Zone not found!!!"
+    echo "Zone is Empty"
 fi
 echo "Setting port"
 if [[ -z "${PORT}" ]]; then
