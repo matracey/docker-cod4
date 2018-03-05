@@ -9,7 +9,6 @@ else
   chmod +x cod4x18_dedrun
   echo "cod4x18_dedrun found" 
 fi
-echo "Testing if Main is empty"
 if [ "$(ls -A main)" ]; then
 	echo "Main is Good"
 	echo "Testing if xbase_00.iwd is in main"
@@ -21,22 +20,22 @@ if [ "$(ls -A main)" ]; then
 	echo "Xbase_00.iwd is Good"
 	fi
 else
-echo "Main is Empty"
+echo "ERROR Main is Empty"
 fi
 if [ "$(ls -A mods)" ]; then
      echo "Mods Good"
 else
-    echo "Mods is Empty"
+    echo "ERROR Mods is Empty"
 fi
 if [ "$(ls -A usermaps)" ]; then
      echo "Usermaps Good"
 else
-    echo "Usermaps is Empty"
+    echo "ERROR Usermaps is Empty"
 fi
 if [ "$(ls -A zone)" ]; then
      echo "Zone is Good"
 else
-    echo "Zone is Empty"
+    echo "ERROR Zone is"
 fi
 echo "Setting port"
 if [[ -z "${PORT}" ]]; then
