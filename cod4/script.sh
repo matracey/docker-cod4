@@ -11,12 +11,12 @@ else
 fi
 echo "Testing if main is there"
 if [[ -d main ]]; then
-	echo "main found"
-	echo "testing if xbase_00.iwd is in main"
+	echo "Main found"
+	echo "Testing if xbase_00.iwd is in main"
 	if [[ ! -f main/xbase_00.iwd ]]; then
-	echo "xbase_00.iwd not found copying it now"
+	echo "Xbase_00.iwd not found copying it now"
 	cp xbase_00.iwd main/
-	echo "copying xbase_00.iwd done"
+	echo "Copying xbase_00.iwd done"
 	fi
 else
 echo "ERROR Main not found!!!"
