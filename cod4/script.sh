@@ -6,6 +6,7 @@ if [ ! -f cod4x18_dedrun ]; then
     chmod +x cod4x18_dedrun
     echo ready
 else
+  chmod +x cod4x18_dedrun
   echo "cod4x18_dedrun found" 
 fi
 if [[ -f main ]]; then
