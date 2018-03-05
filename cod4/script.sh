@@ -9,16 +9,18 @@ else
   chmod +x cod4x18_dedrun
   echo "cod4x18_dedrun found" 
 fi
-#echo "Testing if main is there"
-#if [[ -f main ]]; then
-#	echo "main found"
-#	if [[ ! -f main/xbase_00.iwd ]]; then
-#	echo "xbase_00.iwd not found"
-#	cp xbase_00.iwd main/
-#	echo "copying xbase_00.iwd done"
-#	fi
-#fi
-#echo "Main not found or emty"
+echo "Testing if main is there"
+if [[ -f main ]]; then
+	echo "main found"
+	echo "testing if xbase_00.iwd is in main"
+	if [[ ! -f main/xbase_00.iwd ]]; then
+	echo "xbase_00.iwd not found copying it now"
+	cp xbase_00.iwd main/
+	echo "copying xbase_00.iwd done"
+	fi
+	else
+	echo "ERROR Main not found!!!"
+fi
 echo "Setting port"
 if [[ -z "${PORT}" ]]; then
   echo "The PORT variable is empty."
