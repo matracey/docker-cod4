@@ -55,14 +55,17 @@ Note the following.
 Important:
 
 The docker uses "PORT", "MAP", "MODNAME" and "EXTRA" enviroment variable to pass commands to the servers startup.
+It also uses the "READY" enviroment variable just to check if you want to do this. :) If Empty it won't start.
 Here is a list of commands that I use:
 
-| **Value** | **Description** | ** Variable name ** |
+| ** Variable name ** | **Description** | **Value** |
 |---|---|---|
-| $PORT$ | Set what port the server run on | PORT |
-| +map_rotate | Starts the server with the defined rotate sequens in server.cfg file | MAP |
-| $MODNAME$ | Defines what mod you whant to use. Write the name of your mod instead of $MODNAME$ | MODNAME |
-| +set sv_authorizemode -1 | 1 only allows players with legal copies to join, 0 allows cracked players, and -1 allows both types of players while the Activison authentication server is down. | EXTRA |
+| READY | Checking if you are Ready | YES |
+| SERVERTYPE | 2 Is for Internet. 1 Is for LAN. |  1 |
+| PORT | Set what port the server should run on | 28960 |
+| MAP | Starts the server with the defined rotate sequens in server.cfg file | +map_rotate |
+| MODNAME | Defines what mod you whant to use. Write the name of your mod instead of $MODNAME$ | $MODNAME$ |
+| EXTRA | 1 only allows players with legal copies to join, 0 allows cracked players, and -1 allows both types of players while the Activison authentication server is down. | +set sv_authorizemode -1 |
 
 ## Testing
 

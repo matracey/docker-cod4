@@ -5,13 +5,16 @@ ENV LANG=da_DK.UTF-8
 ENV LANGUAGE=da_DK
 
 # Running options to COD4 server 
+ENV READY=""
 ENV PORT="28960"
 ENV MODNAME=""
 ENV MAP="+map_rotate"
 ENV EXTRA=""
+ENV SERVERTYPE=""
 
 #from http://cod4-linux-server.webs.com/
-RUN yum -y install glibc.i686 libgcc.i686 libstdc++.i686 zlib.i686
+RUN yum -y provides ld-linux.so.2
+RUN yum -y install glibc.i686
 
 RUN useradd cod4
 ADD cod4 /home/cod4/
