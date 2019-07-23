@@ -13,7 +13,7 @@ ENV EXTRA=""
 ENV SERVERTYPE=""
 
 #from http://cod4-linux-server.webs.com/
-RUN yum -y install glibc.i686 libgcc.i686 zlib.i686
+RUN yum -y install glibc libgcc libstdc++ zlib
 
 RUN useradd cod4
 ADD cod4 /home/cod4/
