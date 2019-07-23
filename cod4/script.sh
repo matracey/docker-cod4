@@ -38,7 +38,7 @@ else
     echo "ERROR Zone is Empty"
 fi
 echo "Setting server type"
-if [[ -z"${SERVERTYPE}" ]]; then
+if [[ -z "${SERVERTYPE}" ]]; then
   echo "The SERVERTYPE variable is empty."
   SERVERTYPE="1"
 fi
