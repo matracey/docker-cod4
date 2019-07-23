@@ -14,7 +14,6 @@ ENV SERVERTYPE=""
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y provides ld-linux.so.2
-RUN yum -y update
 RUN yum -y install glibc.i686 libfreetype.so.6 libfontconfig.so.1 libstdc++.so.6
 
 RUN useradd cod4
@@ -31,3 +30,4 @@ VOLUME ["/home/cod4/main"]
 VOLUME ["/home/cod4/zone"]
 VOLUME ["/home/cod4/mods"]
 VOLUME ["/home/cod4/usermaps"]
+VOLUME ["/home/cod4/main/server.cfg"]
