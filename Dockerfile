@@ -10,6 +10,7 @@ ENV PORT="28960"
 ENV MODNAME=""
 ENV MAP="+map_rotate"
 ENV EXTRA=""
+ENV SERVERTYPE=""
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y install glibc.i686 libgcc.i686 libstdc++.i686 zlib.i686
