@@ -14,7 +14,7 @@ ENV SERVERTYPE=""
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y provides ld-linux.so.2
-RUN yum -y install glibc libfreetype.so.6 libfontconfig.so.1 libstdc++.so.6
+RUN yum -y install glibc.i686
 
 RUN useradd cod4
 ADD cod4 /home/cod4/
