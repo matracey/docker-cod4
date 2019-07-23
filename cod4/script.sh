@@ -35,7 +35,12 @@ fi
 if [ "$(ls -A zone)" ]; then
      echo "Zone is Good"
 else
-    echo "ERROR Zone is"
+    echo "ERROR Zone is Empty"
+fi
+echo "Setting server type"
+if [[ -z"${SERVERTYPE}" ]]; then
+  echo "The SERVERTYPE variable is empty."
+  SERVERTYPE="1"
 fi
 echo "Setting port"
 if [[ -z "${PORT}" ]]; then
@@ -52,10 +57,10 @@ if [[ ! -z "${READY}" ]]; then
 	echo "Config is Ready"
 	if [[ ! -z "${MODNAME}" ]]; then
 		echo "Mod enabled (using $MODNAME mod)"
-		./cod4x18_dedrun "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec server.cfg" "$MAP"
+		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec server.cfg" "$MAP"
 	else
 		echo "Not using Mod"
-		./cod4x18_dedrun "+set net_port $PORT" "$EXTRA" "+exec server.cfg" "$MAP"
+		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "$EXTRA" "+exec server.cfg" "$MAP"
 	fi
 
 fi
