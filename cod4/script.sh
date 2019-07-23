@@ -47,6 +47,11 @@ if [[ -z "${PORT}" ]]; then
   echo "The PORT variable is empty."
   PORT="28960"
 fi
+echo "Setting EXTRA arg"
+if [[ -z "${EXTRA}" ]]; then
+  echo "The EXTRA variable is empty."
+  EXTRA="+set sv_authorizemode -1"
+fi
 echo "Setting MAP"
 if [[ -z "${MAP}" ]]; then
   echo "The MAP variable is empty."
