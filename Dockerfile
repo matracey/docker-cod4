@@ -11,6 +11,7 @@ ENV MODNAME=""
 ENV MAP="+map_rotate"
 ENV EXTRA=""
 ENV SERVERTYPE=""
+ENV EXECFILE=""
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y provides ld-linux.so.2
