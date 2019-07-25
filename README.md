@@ -12,20 +12,7 @@ Runs a Call of duty 4 Modern Warfare dedicated server in a Docker container.
 - Original COD4 **main** and **zone** files required
 - Works with custom mods and usermaps
 
-- If you wan't to run this manually then here is a example how to do it:
-
-~~~
-docker run --user=cod4 -it --name cod4 \
--p 28960:28960/udp \
--v /cod4/user/$Sharename$/res/main:/home/cod4/main \
--v /cod4/user/$Sharename$/res/zone:/home/cod4/zone \
--v /cod4/user/$Sharename$/res/mods:/home/cod4/mods \
--v /cod4/user/$Sharename$/res/usermaps:/home/cod4/usermaps \
--v /cod4/user/$Sharename$/server.cfg:/home/cod4/main/server.cfg \
-henkallsn/docker-cod4
-~~~
-
-- This guide is optimized for Unraid
+- This guide is optimized for Unraid but can also be used on Openmediavault
 
 - First make a share on Unraid to place the Call of Duty 4 files in.
 
@@ -54,13 +41,14 @@ Note the following.
 
 Important:
 
-The docker uses "PORT", "MAP", "MODNAME" and "EXTRA" enviroment variable to pass commands to the servers startup.
+The docker uses "EXECFILE", "PORT", "MAP", "MODNAME" and "EXTRA" enviroment variable to pass commands to the servers startup.
 It also uses the "READY" enviroment variable just to check if you want to do this. :) If Empty it won't start.
 Here is a list of commands that I use:
 
 | ** Variable name ** | **Description** | **Value** |
 |---|---|---|
 | READY | Checking if you are Ready | YES |
+| EXECFILE | The name of the exec file that should be used. Placed in the "main" folder. | server.cfg |
 | SERVERTYPE | 2 Is for Internet. 1 Is for LAN. |  1 |
 | PORT | Set what port the server should run on | 28960 |
 | MAP | Starts the server with the defined rotate sequens in server.cfg file | +map_rotate |
@@ -70,3 +58,5 @@ Here is a list of commands that I use:
 ## Testing
 
 1. Run a COD4 client and try to connect to `yourhostIPaddress:28960`
+
+OBS: If you use this on OpenMediaValt you have to add the server ip to the favorrites in Call of Duty server list.
