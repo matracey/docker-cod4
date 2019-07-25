@@ -37,7 +37,6 @@ Note the following.
 | /mnt/user/$Sharename$/zone | /home/cod4/zone | I copied the contents of this from my CoD4:MW |
 | /mnt/user/$Sharename$/mods | /home/cod4/mods | I keep any mods I want to install on the server in here |
 | /mnt/user/$Sharename$/usermaps | /home/cod4/usermaps | I keep my custom maps in here |
-| /mnt/user/$Sharename$/serverconf/server.cfg | /home/cod4/main/server.cfg | This is where to point to your server.cfg file |
 
 Important:
 
