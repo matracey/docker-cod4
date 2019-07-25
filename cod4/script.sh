@@ -52,6 +52,11 @@ if [[ -z "${EXTRA}" ]]; then
   echo "The EXTRA variable is empty."
   EXTRA="+set sv_authorizemode -1"
 fi
+echo "Setting exec file"
+if [[ -z "${EXECFILE}" ]]; then
+  echo "The EXECFILE variable is empty."
+  EXECFILE="server.cfg"
+fi
 echo "Setting MAP"
 if [[ -z "${MAP}" ]]; then
   echo "The MAP variable is empty."
@@ -62,10 +67,10 @@ if [[ ! -z "${READY}" ]]; then
 	echo "Config is Ready"
 	if [[ ! -z "${MODNAME}" ]]; then
 		echo "Mod enabled (using $MODNAME mod)"
-		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec server.cfg" "$MAP"
+		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec $EXECFILE" "$MAP"
 	else
 		echo "Not using Mod"
-		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "$EXTRA" "+exec server.cfg" "$MAP"
+		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "$EXTRA" "+exec $EXECFILE" "$MAP"
 	fi
 
 fi
