@@ -15,7 +15,7 @@ ENV EXECFILE=""
 
 #from http://cod4-linux-server.webs.com/
 RUN yum -y provides ld-linux.so.2
-RUN yum -y install glibc.i686
+RUN yum -y install glibc.i686 unzip
 
 RUN useradd cod4
 ADD cod4 /home/cod4/
