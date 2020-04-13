@@ -27,4 +27,4 @@ WORKDIR /home/cod4
 RUN chmod +x script.sh
 ENTRYPOINT ["/home/cod4/script.sh"]
 
-VOLUME ["/home/cod4"]
+VOLUME ["/home/cod4/gamefiles/"]
