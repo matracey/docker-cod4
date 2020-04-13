@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 if [ ! -f gamefiles/cod4x18_dedrun ]; then
     echo "cod4x18_dedrun not found... trying to download it."
-    curl https://cod4x.me/downloads/cod4x_server-linux.zip > cod4x.zip && unzip -o cod4x.zip && rm cod4x.zip
+    curl https://cod4x.me/downloads/cod4x_server-linux.zip > cod4x.zip && unzip -o cod4x.zip -d gamefiles && rm cod4x.zip
     echo "Download Done"
     chmod +x gamefiles/cod4x18_dedrun
     echo ready
