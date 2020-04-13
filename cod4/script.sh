@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-if [ ! -f cod4x18_dedrun ]; then
+if [ ! -f gamefiles/cod4x18_dedrun ]; then
     echo "cod4x18_dedrun not found... trying to download it."
     curl https://cod4x.me/downloads/cod4x_server-linux.zip > cod4x.zip && unzip -o cod4x.zip && rm cod4x.zip
     echo "Download Done"
-    chmod +x cod4x18_dedrun
+    chmod +x gamefiles/cod4x18_dedrun
     echo ready
 else
-  chmod +x cod4x18_dedrun
+  chmod +x gamefiles/cod4x18_dedrun
   echo "cod4x18_dedrun found" 
 fi
-if [ "$(ls -A main)" ]; then
+if [ "$(ls -A gamefiles/main)" ]; then
 	echo "Main is Good"
 	echo "Testing if xbase_00.iwd is in main"
-	if [[ ! -f main/xbase_00.iwd ]]; then
+	if [[ ! -f gamefiles/main/xbase_00.iwd ]]; then
 	echo "Xbase_00.iwd not found copying it now"
-	cp xbase_00.iwd main/
+	cp xbase_00.iwd gamefiles/main/
 	echo "Copying xbase_00.iwd done"
 	else
 	echo "Xbase_00.iwd is Good"
@@ -22,17 +22,17 @@ if [ "$(ls -A main)" ]; then
 else
 echo "ERROR Main is Empty"
 fi
-if [ "$(ls -A mods)" ]; then
+if [ "$(ls -A gamefiles/mods)" ]; then
      echo "Mods Good"
 else
     echo "ERROR Mods is Empty"
 fi
-if [ "$(ls -A usermaps)" ]; then
+if [ "$(ls -A gamefiles/usermaps)" ]; then
      echo "Usermaps Good"
 else
     echo "ERROR Usermaps is Empty"
 fi
-if [ "$(ls -A zone)" ]; then
+if [ "$(ls -A gamefiles/zone)" ]; then
      echo "Zone is Good"
 else
     echo "ERROR Zone is Empty"
@@ -67,10 +67,10 @@ if [[ ! -z "${READY}" ]]; then
 	echo "Config is Ready"
 	if [[ ! -z "${MODNAME}" ]]; then
 		echo "Mod enabled (using $MODNAME mod)"
-		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec $EXECFILE" "$MAP"
+		gamefiles/cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "+set fs_game mods/$MODNAME" "$EXTRA" "+exec $EXECFILE" "$MAP"
 	else
 		echo "Not using Mod"
-		./cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "$EXTRA" "+exec $EXECFILE" "$MAP"
+		gamefiles/cod4x18_dedrun "+set dedicated $SERVERTYPE" "+set net_port $PORT" "$EXTRA" "+exec $EXECFILE" "$MAP"
 	fi
 
 fi
