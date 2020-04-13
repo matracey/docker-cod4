@@ -27,7 +27,4 @@ WORKDIR /home/cod4
 RUN chmod +x script.sh
 ENTRYPOINT ["/home/cod4/script.sh"]
 
-VOLUME ["/home/cod4/main"]
-VOLUME ["/home/cod4/zone"]
-VOLUME ["/home/cod4/mods"]
-VOLUME ["/home/cod4/usermaps"]
+VOLUME ["/home/cod4"]
