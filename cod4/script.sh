@@ -16,19 +16,19 @@ fi
 
 if [ "$(ls -A gamefiles/mods)" ]; then
      echo "Mods Good"
-     chmod 777 gamefiles/main
+     chmod 777 gamefiles/mods
 else
     echo "ERROR Mods is Empty"
 fi
 if [ "$(ls -A gamefiles/usermaps)" ]; then
      echo "Usermaps Good"
-     chmod 777 gamefiles/main
+     chmod 777 gamefiles/usermaps
 else
     echo "ERROR Usermaps is Empty"
 fi
 if [ "$(ls -A gamefiles/zone)" ]; then
      echo "Zone is Good"
-     chmod 777 gamefiles/main
+     chmod 777 gamefiles/zone
 else
     echo "ERROR Zone is Empty"
 fi
