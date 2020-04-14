@@ -1,16 +1,7 @@
 #!/usr/bin/env bash
-if [ ! -f gamefiles/cod4x18_dedrun ]; then
-    echo "cod4x18_dedrun not found... trying to download it."
-    curl https://github.com/henkall/docker-cod4/raw/ubuntu/cod4xfiles.zip && unzip -o cod4xfiles.zip -d gamefiles && rm cod4xfiles.zip
-    echo "Download Done"
-    chmod +x gamefiles/cod4x18_dedrun
-    echo ready
-else
-  chmod +x gamefiles/cod4x18_dedrun
-  echo "cod4x18_dedrun found" 
-fi
 if [ "$(ls -A gamefiles/main)" ]; then
 	echo "Main is Good"
+	chmod 777 gamefiles/main
 	echo "Testing if xbase_00.iwd is in main"
 	if [[ ! -f gamefiles/main/xbase_00.iwd ]]; then
 	echo "Xbase_00.iwd not found copying it now"
@@ -37,6 +28,16 @@ if [ "$(ls -A gamefiles/zone)" ]; then
      echo "Zone is Good"
 else
     echo "ERROR Zone is Empty"
+fi
+if [ ! -f gamefiles/cod4x18_dedrun ]; then
+    echo "cod4x18_dedrun not found... trying to download it."
+    curl https://raw.githubusercontent.com/henkall/docker-cod4/ubuntu/cod4xfiles.zip -o cod4xfiles.zip && unzip -o cod4xfiles.zip -d gamefiles && rm cod4xfiles.zip
+    echo "Download Done"
+    chmod +x gamefiles/cod4x18_dedrun
+    echo ready
+else
+  chmod +x gamefiles/cod4x18_dedrun
+  echo "cod4x18_dedrun found" 
 fi
 echo "Setting server type"
 if [[ -z "${SERVERTYPE}" ]]; then
