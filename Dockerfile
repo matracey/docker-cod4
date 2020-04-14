@@ -1,6 +1,4 @@
-FROM centos:7
-MAINTAINER matracey
-
+FROM ubuntu
 ENV LANG=da_DK.UTF-8
 ENV LANGUAGE=da_DK
 
@@ -13,11 +11,13 @@ ENV EXTRA=""
 ENV SERVERTYPE=""
 ENV EXECFILE=""
 
-#from http://cod4-linux-server.webs.com/
-RUN yum -y provides ld-linux.so.2
-RUN yum -y install glibc.i686 unzip
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN useradd cod4
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get install -y lib32stdc++6 unzip
+
+RUN groupadd -r cod4 && useradd --no-log-init -r -g cod4 cod4
 ADD cod4 /home/cod4/
 RUN chown -R cod4:cod4 /home/cod4
 
