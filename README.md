@@ -33,10 +33,10 @@ Note the following.
 
 | **Host path** | **Container path** | Note |
 | --- | --- | --- |
-| /mnt/user/$Sharename$/main | /home/cod4/main | I copied the contents of this from my CoD4:MW |
-| /mnt/user/$Sharename$/zone | /home/cod4/zone | I copied the contents of this from my CoD4:MW |
-| /mnt/user/$Sharename$/mods | /home/cod4/mods | I keep any mods I want to install on the server in here |
-| /mnt/user/$Sharename$/usermaps | /home/cod4/usermaps | I keep my custom maps in here |
+| /mnt/user/$Sharename$/main | /home/cod4/gamefiles/main | I copied the contents of this from my CoD4:MW |
+| /mnt/user/$Sharename$/zone | /home/cod4/gamefiles/zone | I copied the contents of this from my CoD4:MW |
+| /mnt/user/$Sharename$/mods | /home/cod4/gamefiles/mods | I keep any mods I want to install on the server in here |
+| /mnt/user/$Sharename$/usermaps | /home/cod4/gamefiles/usermaps | I keep my custom maps in here |
 
 Important:
 
